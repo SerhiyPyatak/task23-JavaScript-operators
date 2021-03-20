@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Тема 23: Типы данных и операторы</h1>
+    <button onclick="checkAge()">Check Age</button>
+    <button onclick="findSymbol()">NumSymbol</button>
+    <button onclick="findSymbolNormal()">Find Symbol NormalWay</button>
+    <button onclick="sameNums1()">Same Numbers</button>
+    <button onclick="leapYear()">Check Year</button>
+    <button onclick="palindromeChecker()">Is palindrome</button>
+    <button onclick="cornerBoy()">Corner Boy :)</button>
+    <button onclick="fitterRoundSquare()">Round->Square</button>
+    <form action="" method="GET" class="taskform">
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №1</legend>
+        <input type="radio" id="check-age" name="task" value="checkTheAge" />
+        <label for="check-age">
+          <p>
+            Запросить у пользователя его возраст и определить, кем он является:
+            ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером
+            (60– ...).
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №2</legend>
+        <input type="radio" id="find-symbol" name="task" />
+        <label for="find-symbol">
+          <p>
+            Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол,
+            который расположен на этой клавише (1–!, 2–@, 3–# и т. д).
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №3</legend>
+        <input type="radio" id="same-nums" name="task" />
+        <label for="same-nums">
+          <p>
+            Запросить у пользователя трехзначное число и проверить, есть ли в
+            нем одинаковые цифры.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №4</legend>
+        <input type="radio" id="leap-year" name="task" />
+        <label for="leap-year">
+          <p>
+            Запросить у пользователя год и проверить, високосный он или нет.
+            Високосный год либо кратен 400, либо кратен 4 и при этом не кратен
+            100.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №5</legend>
+        <input type="radio" id="palindrome-checker" name="task" />
+        <label for="palindrome-checker">
+          <p>
+            Запросить у пользователя пятиразрядное число и определить, является
+            ли оно палиндромом.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №6</legend>
+        <input type="radio" id="currency-converter" name="task" />
+        <label for="currency-converter">
+          <p>
+            Написать конвертор валют. Пользователь вводит количество USD,
+            выбирает, в какую валюту хочет перевести EUR, UAN или AZN, и
+            получает в ответ соответствующую сумму.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №7</legend>
+        <input type="radio" id="corner-boy" name="task" />
+        <label for="corner-boy">
+          <p>
+            Запросить у пользователя сумму покупки и вывести сумму к оплате со
+            скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500
+            и выше – 7%.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №8</legend>
+        <input type="radio" id="round-square-fitter" name="task" />
+        <label for="round-square-fitter">
+          <p>
+            Запросить у пользователя длину окружности и периметр квадрата.
+            Определить, может ли такая окружность поместиться в указанный
+            квадрат.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №9</legend>
+        <input type="radio" id="user-quiz" name="task" />
+        <label for="user-quiz">
+          <p>
+            Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта
+            ответа. За каждый правильный ответ начисляется 2 балла. После
+            вопросов выведите пользователю количество набранных баллов.
+          </p>
+        </label>
+      </fieldset>
+      <fieldset class="taskform__taskunit">
+        <legend>Задание №10</legend>
+        <input type="radio" id="next-date" name="task" />
+        <label for="next-date">
+          <p>
+            Запросить дату (день, месяц, год) и вывести следующую за ней дату.
+            Учтите возможность перехода на следующий месяц, год, а также
+            високосный год.
+          </p>
+        </label>
+      </fieldset>
+      <div>
+        <button type="submit">Go Ahead >></button>
+      </div>
+    </form>
+  </body>
+</html>

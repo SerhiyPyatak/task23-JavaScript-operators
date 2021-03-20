@@ -1,0 +1,22 @@
+.taskform__taskunit {
+	display:flex;
+	margin:10px;
+}
+
+.taskform__taskunit:nth-child(odd) {
+	background-color:lightyellow;
+	back
+}
+
+.taskform__taskunit > * {
+	cursor:pointer;
+}
+
+label p {
+	margin: 0 5px;
+}
+
+button {
+	margin: 50px 0;
+	cursor:pointer;
+}
