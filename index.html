@@ -10,15 +10,7 @@
   </head>
   <body>
     <h1>Тема 23: Типы данных и операторы</h1>
-    <button onclick="checkAge()">Check Age</button>
-    <button onclick="findSymbol()">NumSymbol</button>
-    <button onclick="findSymbolNormal()">Find Symbol NormalWay</button>
-    <button onclick="sameNums1()">Same Numbers</button>
-    <button onclick="leapYear()">Check Year</button>
-    <button onclick="palindromeChecker()">Is palindrome</button>
-    <button onclick="cornerBoy()">Corner Boy :)</button>
-    <button onclick="fitterRoundSquare()">Round->Square</button>
-    <form action="" method="GET" class="taskform">
+    <form action="#" method="GET" class="taskform">
       <fieldset class="taskform__taskunit">
         <legend>Задание №1</legend>
         <input type="radio" id="check-age" name="task" value="checkTheAge" />
@@ -32,7 +24,12 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №2</legend>
-        <input type="radio" id="find-symbol" name="task" />
+        <input
+          type="radio"
+          id="find-symbol"
+          name="task"
+          value="findTheSymbol"
+        />
         <label for="find-symbol">
           <p>
             Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол,
@@ -42,7 +39,7 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №3</legend>
-        <input type="radio" id="same-nums" name="task" />
+        <input type="radio" id="same-nums" name="task" value="checkSameNums" />
         <label for="same-nums">
           <p>
             Запросить у пользователя трехзначное число и проверить, есть ли в
@@ -52,7 +49,7 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №4</legend>
-        <input type="radio" id="leap-year" name="task" />
+        <input type="radio" id="leap-year" name="task" value="checkLeapYear" />
         <label for="leap-year">
           <p>
             Запросить у пользователя год и проверить, високосный он или нет.
@@ -63,7 +60,12 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №5</legend>
-        <input type="radio" id="palindrome-checker" name="task" />
+        <input
+          type="radio"
+          id="palindrome-checker"
+          name="task"
+          value="checkThePalindrome"
+        />
         <label for="palindrome-checker">
           <p>
             Запросить у пользователя пятиразрядное число и определить, является
@@ -73,7 +75,12 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №6</legend>
-        <input type="radio" id="currency-converter" name="task" />
+        <input
+          type="radio"
+          id="currency-converter"
+          name="task"
+          value="convertTheCurrency"
+        />
         <label for="currency-converter">
           <p>
             Написать конвертор валют. Пользователь вводит количество USD,
@@ -84,7 +91,12 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №7</legend>
-        <input type="radio" id="corner-boy" name="task" />
+        <input
+          type="radio"
+          id="corner-boy"
+          name="task"
+          value="checkTheDiscount"
+        />
         <label for="corner-boy">
           <p>
             Запросить у пользователя сумму покупки и вывести сумму к оплате со
@@ -95,7 +107,12 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №8</legend>
-        <input type="radio" id="round-square-fitter" name="task" />
+        <input
+          type="radio"
+          id="round-square-fitter"
+          name="task"
+          value="checkCircleFitting"
+        />
         <label for="round-square-fitter">
           <p>
             Запросить у пользователя длину окружности и периметр квадрата.
@@ -106,7 +123,7 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №9</legend>
-        <input type="radio" id="user-quiz" name="task" />
+        <input type="radio" id="user-quiz" name="task" value="checkUserQuiz" />
         <label for="user-quiz">
           <p>
             Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта
@@ -117,7 +134,7 @@
       </fieldset>
       <fieldset class="taskform__taskunit">
         <legend>Задание №10</legend>
-        <input type="radio" id="next-date" name="task" />
+        <input type="radio" id="next-date" name="task" value="checkNextDate" />
         <label for="next-date">
           <p>
             Запросить дату (день, месяц, год) и вывести следующую за ней дату.
@@ -126,9 +143,9 @@
           </p>
         </label>
       </fieldset>
-      <div>
-        <button type="submit">Go Ahead >></button>
-      </div>
+      <button type="submit" onclick="processForm(this.form)">
+        Go Ahead >>
+      </button>
     </form>
   </body>
 </html>

@@ -139,5 +139,40 @@ function cornerBoy() {
 function fitterRoundSquare() {
 	const circLength = +prompt('Give me a circle length, please');
 	const squarePerimeter = +prompt('Give me a square perimeter, please');
-	(circLength / Math.PI <= squarePerimeter/2) ? alert('The circle fits into this square') : alert('Circle doesn\'t fit inside such square');
+	(circLength / Math.PI <= squarePerimeter/4) 
+		? alert('The circle fits into this square') 
+		: alert('Circle doesn\'t fit inside such square');
+}
+
+function processForm(oForm) {
+	const task = oForm.elements.task.value;
+	switch (task) {
+		case "checkTheAge":
+			checkAge();
+			break;
+		case "findTheSymbol":
+			findSymbol();
+			break;
+		case "checkSameNums":
+			sameNums();
+			break;
+		case "checkLeapYear":
+			leapYear();
+			break;
+		case "checkThePalindrome":
+			palindromeChecker();
+			break;
+		case "convertTheCurrency":
+			break;
+		case "checkTheDiscount":
+			cornerBoy();
+			break;
+		case "checkCircleFitting":
+			fitterRoundSquare();
+			break;
+		case "checkUserQuiz":
+			break;
+		case "checkNextDate":
+			break;
+	}
 }
