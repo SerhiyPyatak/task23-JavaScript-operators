@@ -11,7 +11,7 @@
   <body>
     <h1>Тема 23: Типы данных и операторы</h1>
     <form action="#" method="GET" class="taskform">
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task1">
         <legend>Задание №1</legend>
         <input type="radio" id="check-age" name="task" value="checkTheAge" />
         <label for="check-age">
@@ -22,7 +22,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task2">
         <legend>Задание №2</legend>
         <input
           type="radio"
@@ -37,7 +37,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task3">
         <legend>Задание №3</legend>
         <input type="radio" id="same-nums" name="task" value="checkSameNums" />
         <label for="same-nums">
@@ -47,7 +47,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task4">
         <legend>Задание №4</legend>
         <input type="radio" id="leap-year" name="task" value="checkLeapYear" />
         <label for="leap-year">
@@ -58,7 +58,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task5">
         <legend>Задание №5</legend>
         <input
           type="radio"
@@ -73,7 +73,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task6">
         <legend>Задание №6</legend>
         <input
           type="radio"
@@ -88,8 +88,21 @@
             получает в ответ соответствующую сумму.
           </p>
         </label>
+        <fieldset id="currency-exchange">
+          <label for="usd-amount"> Put USD amount: </label>
+          <input type="number" id="usd-amount" name="usdAmount" />
+          <div>
+            <p>Select currency to exchange please:</p>
+            <input type="radio" id="EUR" value="0" name="currency" />
+            <label for="EUR">EUR</label>
+            <input type="radio" id="UAH" value="1" name="currency" />
+            <label for="UAH">UAH</label>
+            <input type="radio" id="AZN" value="2" name="currency" />
+            <label for="AZN">AZN</label>
+          </div>
+        </fieldset>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task7">
         <legend>Задание №7</legend>
         <input
           type="radio"
@@ -105,7 +118,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task8">
         <legend>Задание №8</legend>
         <input
           type="radio"
@@ -121,7 +134,7 @@
           </p>
         </label>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task9">
         <legend>Задание №9</legend>
         <input type="radio" id="user-quiz" name="task" value="checkUserQuiz" />
         <label for="user-quiz">
@@ -131,8 +144,46 @@
             вопросов выведите пользователю количество набранных баллов.
           </p>
         </label>
+        <div class="quiz">
+          <fieldset class="quiz-card">
+            <legend>Вопрос №1:</legend>
+            <p>
+              У олиной мамы пятеро детей: Оксана, Катя, Марина и Коля. Как зовут
+              последнего ребёнка?
+            </p>
+            <input type="radio" id="task1-1" name="task1" value="" />
+            <label for="task1-1">Юля</label>
+            <input type="radio" id="task1-2" name="task1" value="" />
+            <label for="task1-2">Юра</label>
+            <input type="radio" id="task1-3" name="task1" value="true" />
+            <label for="task1-3">Оля</label>
+          </fieldset>
+          <fieldset class="quiz-card">
+            <legend>Вопрос №2:</legend>
+            <p>
+              В гостиннице пять этажей: чем выше этаж, тем больше людей
+              проживает на нём. На какой этаж лифт ездит чаще всего?
+            </p>
+            <input type="radio" id="task2-1" name="task2" value="" />
+            <label for="task2-1">На 5-й</label>
+            <input type="radio" id="task2-2" name="task2" value="true" />
+            <label for="task2-2">На 1-й</label>
+            <input type="radio" id="task2-3" name="task2" value="" />
+            <label for="task2-3">На 2-й</label>
+          </fieldset>
+          <fieldset class="quiz-card">
+            <legend>Вопрос №3:</legend>
+            <p>Сколько месяцев в году имеет 28 дней?</p>
+            <input type="radio" id="task3-1" name="task3" value="" />
+            <label for="task3-1">Один</label>
+            <input type="radio" id="task3-2" name="task3" value="" />
+            <label for="task3-2">Два</label>
+            <input type="radio" id="task3-3" name="task3" value="true" />
+            <label for="task3-3">Двенадцать</label>
+          </fieldset>
+        </div>
       </fieldset>
-      <fieldset class="taskform__taskunit">
+      <fieldset class="taskform__taskunit" id="task10">
         <legend>Задание №10</legend>
         <input type="radio" id="next-date" name="task" value="checkNextDate" />
         <label for="next-date">
@@ -142,6 +193,7 @@
             високосный год.
           </p>
         </label>
+        <input type="date" name="calendar" id="task10-calendar" />
       </fieldset>
       <button type="submit" onclick="processForm(this.form)">
         Go Ahead >>

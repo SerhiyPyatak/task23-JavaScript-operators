@@ -144,6 +144,35 @@ function fitterRoundSquare() {
 		: alert('Circle doesn\'t fit inside such square');
 }
 
+function getNextDay(presentDay) {
+	let oDate = new Date(presentDay);
+	oDate.setDate(oDate.getDate() + 1);
+	oDate = oDate.toLocaleDateString('en-GB', {  
+		day:   'numeric',
+		month: 'short',
+		year:  'numeric',
+	});
+	alert(`The next day will be: ${oDate}`);
+}
+
+function convertCurrency(amount, currency) {
+	const curCourse = [[0.84, "EUR"], [27.72, "UAH"], [1.7, "AZN"]];
+	const cache = (amount * curCourse[currency][0]).toFixed(2);
+	alert(`Take your cache: ${cache} ${curCourse[currency][1]}, please :\)`);
+	console.log(amount);
+	console.log(currency);
+}
+
+function checkQuiz(arrAnswers) {
+	let result = 0;
+	for(let i = 0; i <= 2; i++) {
+		if (arrAnswers[i]) {
+			result += 2;
+		};
+	};
+	alert(`Your score is ${result} points!`);
+}
+
 function processForm(oForm) {
 	const task = oForm.elements.task.value;
 	switch (task) {
@@ -163,6 +192,7 @@ function processForm(oForm) {
 			palindromeChecker();
 			break;
 		case "convertTheCurrency":
+			convertCurrency(oForm.elements.usdAmount.value, +oForm.elements.currency.value);
 			break;
 		case "checkTheDiscount":
 			cornerBoy();
@@ -171,8 +201,14 @@ function processForm(oForm) {
 			fitterRoundSquare();
 			break;
 		case "checkUserQuiz":
+			checkQuiz([
+				oForm.elements.task1.value,
+				oForm.elements.task2.value,
+				oForm.elements.task3.value
+			]);
 			break;
 		case "checkNextDate":
+			getNextDay(oForm.elements.calendar.value);
 			break;
 	}
 }
